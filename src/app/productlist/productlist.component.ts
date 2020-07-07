@@ -19,6 +19,10 @@ export class ProductlistComponent implements OnInit {
         
     }
   }
+  delete(pos:number)
+  {
+    this.productlist.splice(pos,1);
+  }
   
 
   ngOnInit(): void {
