@@ -9,7 +9,7 @@ import { EditproductsComponent } from './editproducts/editproducts.component';
 
 const routes: Routes = [
   {
-    path:"register",
+    path:"",
     component:RegisterComponent
   },
   {
