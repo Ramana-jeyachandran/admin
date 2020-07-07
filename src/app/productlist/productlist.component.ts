@@ -8,11 +8,15 @@ import { Component, OnInit } from '@angular/core';
 export class ProductlistComponent implements OnInit {
   productlist=[];
   constructor() { 
-    for(let i=1;i<=3;i++)
+   for(let i=0;i<localStorage.length;i++)
     {
-        console.log(window.localStorage.getItem(i.toString()));
-        this.productlist.push(JSON.parse(window.localStorage.getItem(i.toString())));
-        console.log(this.productlist[i]);
+       //console.log(localStorage.length);
+        let key=localStorage.key(i);
+        //console.log(key);
+        //console.log(window.localStorage.getItem(i.toString()));
+        //this.productlist.push(JSON.parse(window.localStorage.getItem(i.toString())));
+        this.productlist.push(JSON.parse(localStorage.getItem(key)));
+        
     }
   }
   
