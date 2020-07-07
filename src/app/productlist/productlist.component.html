@@ -1,0 +1,26 @@
+<div class="col-sg-4">
+    <table class="table table-stripped" cellspacing="10px">
+      <thead>
+        <tr>
+          <th>Product-id</th>
+          <th>Product-Name</th>
+          <th>price</th>
+          <th>Category_name</th>
+          
+        </tr>
+      </thead>
+       <tbody>
+         <tr *ngFor="let p of productlist;let i=index">
+           <td>{{p.product_id}}</td>
+           <td>{{p.product_name}}</td>
+           <td>{{p.price}}</td>
+           <td>{{p.category_name}}</td>
+
+           <td><button class="btn btn-alert" (click)="delete(i+1)">Delete</button></td>
+           <td><button class="btn btn-alert" routerLink="productspecific/{{i+1}}">Edit</button></td>
+
+         </tr>
+      </tbody>
+    </table>
+  </div>
+  <router-outlet></router-outlet>

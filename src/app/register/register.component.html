@@ -1,0 +1,20 @@
+<div class="col-lg-4">
+    <h1>REGISTER</h1><br><br>
+    <form [formGroup]="registerForm" (submit)="check()">
+        
+        <label for="email">Email</label>&nbsp;&nbsp;
+        <input type="text" name="email" formControlName="email">
+        <span *ngIf="!registerForm.get('email').valid">Give a proper mail</span><br><br> 
+        <label for="password">Password</label>&nbsp;&nbsp;
+        <input type="password" name="password" formControlName="password">
+        <span *ngIf="!registerForm.get('password').valid && registerForm.get('password').dirty">Give a password between 8 to 15 characters</span><br><br>
+         
+         <label for="confirm-password">Confirm-Password</label>&nbsp;&nbsp;
+        <input type="password" name="confirm-password" formControlName="confirm-password"><br><br>
+        
+        <input type="submit" class="btn btn-primary" value="Register"> &nbsp;&nbsp;
+        <input type="submit" class="btn btn-primary" value="Login" routerLink="login" >
+        <p>{{status}}</p>
+        
+    </form>
+</div>

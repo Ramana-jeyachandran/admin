@@ -1,0 +1,17 @@
+<div class="col-lg-4">
+    <h1>Create New Products</h1><br><br>
+    <form [formGroup]="createProdform" (submit)="add()">
+        
+        <label for="Product_id">Product_id</label>&nbsp;&nbsp;
+        <input type="number" name="product_id" formControlName="product_id"><br><br>
+        <label for="Product_name">Product_name</label>&nbsp;&nbsp;
+        <input type="text" name="product_name" formControlName="product_name"><br><br>
+        <label for="Category_name">Category_name</label>&nbsp;&nbsp;
+        <input type="text" name="category_name" formControlName="category_name"><br><br>
+        <label for="price">price</label>&nbsp;&nbsp;
+        <input type="number" name="price" formControlName="price"><br><br>
+        <input type="submit" class="btn btn-primary" value="create product"> &nbsp;&nbsp;
+        
+        <p>{{productstatus}}</p>
+    </form>
+</div>
